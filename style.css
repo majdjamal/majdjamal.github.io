@@ -1,14 +1,19 @@
-<style> 
+<style>
 
 body {
-  font-family: verdana; 
+  font-family: verdana; background-color: #43464b; color: #0BEDF7;
   }
 
-.about {
-  width: 80%;
-  height: 200px;
+.home {
+  width: 70%;
   margin: auto;
   padding: 10px;
+}
+
+.skill:hover{
+    color: #4169E1;
+    cursor: pointer;
+
 }
 
 .aboutMe {
@@ -18,7 +23,11 @@ body {
 
 .aboutPage {
   margin-left: 50%;
-  height: 200px;
+}
+
+.connect {
+  margin-left: 50%;
+    margin-top: 5%;
 }
 
 #applications button {
@@ -31,7 +40,6 @@ body {
   width: 150px;
   transition: all 0.5s;
   cursor: pointer;
-  margin-top: 30px;
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
 }
 
@@ -50,7 +58,6 @@ body {
     background-color: #D0F0C0;
     color: #0288d1;
     margin-right: 5%;
-    margin-left: 10%;
 }
 
 .naive{
@@ -59,7 +66,7 @@ body {
 }
 
 .applications{
-  margin-top: 30%;
+  margin-top: 5%;
 }
 
 </style>
