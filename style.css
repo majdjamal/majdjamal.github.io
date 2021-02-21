@@ -13,8 +13,25 @@ body {
 .skill:hover{
     color: #4169E1;
     cursor: pointer;
-
 }
+
+ul{
+  margin-top: 5%;
+}
+
+li {
+  margin-top: 5%;
+  cursor: help;
+}
+
+.course:hover{
+    color: #4169E1;
+}
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
 
 .aboutMe {
   height: 200px;
@@ -63,6 +80,14 @@ body {
 .naive{
     background-color: #FEAB77;
     color: #FF4023;
+}
+
+.back{
+    background-color: #F9E4B7;
+    color: #43464b;
+    text-align: right;
+    margin-top: 50px;
+    outline: none;
 }
 
 .applications{
