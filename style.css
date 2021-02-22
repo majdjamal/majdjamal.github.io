@@ -47,6 +47,19 @@ a, a:hover, a:visited, a:active {
     margin-top: 5%;
 }
 
+.math{
+  color: #FEF6DE;
+
+}
+
+.physics{
+  color: #E8DFFD;
+}
+
+.economics{
+  color: #ACDF87;
+}
+
 #applications button {
   border-radius: 4px;
   border: none;
