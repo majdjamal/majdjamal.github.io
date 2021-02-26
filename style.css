@@ -1,7 +1,9 @@
 <style>
 
 body {
-  font-family: verdana; background-color: #43464b; color: #0BEDF7;
+  font-family: garamond; 
+  background-color: #43464b; 
+  color: #0BEDF7;
   }
 
 .home {
@@ -13,6 +15,10 @@ body {
 .skill:hover{
     color: #4169E1;
     cursor: pointer;
+}
+
+.intro{
+  width: 500px;
 }
 
 ul{
@@ -65,9 +71,9 @@ a, a:hover, a:visited, a:active {
   border: none;
   border-radius: 25px;
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   padding: 16px;
-  width: 150px;
+  width: 130px;
   transition: all 0.5s;
   cursor: pointer;
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
@@ -82,7 +88,7 @@ a, a:hover, a:visited, a:active {
 }
 
 #applications button:hover{
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .decTree{
@@ -103,7 +109,7 @@ a, a:hover, a:visited, a:active {
 }
 
 #applications .imgrec{
-      width: 200px;
+      width: 170px;
       box-shadow: 0 0 3px 0 rgb(230,230,230), 0 10px 20px -8px rgba(0, 0, 0, .7);
 
 }
