@@ -78,6 +78,7 @@ a, a:hover, a:visited, a:active {
   display: inline-block;
   position: relative;
   transition: 0.3s;
+  outline: none;
 }
 
 #applications button:hover{
@@ -85,15 +86,32 @@ a, a:hover, a:visited, a:active {
 }
 
 .decTree{
-    background-color: #D0F0C0;
-    color: #0288d1;
+    background-color: #D7E2C7;
+    color: brown;
     margin-right: 5%;
 }
 
 .naive{
-    background-color: #FEAB77;
-    color: #FF4023;
+    background-color: #FFF0C1;
+    color: #43464b;
 }
+
+.imgrec{
+    margin-left: 5%;
+    background-color: #43464b;
+    color: red;
+}
+
+#applications .imgrec{
+      width: 200px;
+      box-shadow: 0 0 3px 0 rgb(230,230,230), 0 10px 20px -8px rgba(0, 0, 0, .7);
+
+}
+
+#applications .imgrec:hover{
+  box-shadow: 0 0 16px 0 rgb(255,99,71),0 0 50px 0 rgb(255,99,71);
+}
+
 
 .back{
     background-color: #F9E4B7;
