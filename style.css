@@ -6,10 +6,27 @@ body {
   color: #0BEDF7;
   }
 
+
+.app{
+  border-style: solid;
+  border-color: white;
+  border-radius: 70px;
+  width: 55%;
+  height: 600px;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+
 .home {
-  width: 70%;
-  margin: auto;
+  width: 600px;
+  margin-left: 10%;
   padding: 10px;
+}
+
+.achievements{
+  width: 400px;
 }
 
 .skill:hover{
@@ -98,8 +115,8 @@ a, a:hover, a:visited, a:active {
 }
 
 .naive{
-    background-color: #FFF0C1;
-    color: #43464b;
+    background-color: #FFB162;
+    color: #333333;
 }
 
 .imgrec{
@@ -110,9 +127,14 @@ a, a:hover, a:visited, a:active {
 
 #applications .imgrec{
       width: 170px;
-      box-shadow: 0 0 3px 0 rgb(230,230,230), 0 10px 20px -8px rgba(0, 0, 0, .7);
 
 }
+
+#applications .naive:hover{
+  color: black;
+  box-shadow: 0 0 16px 0 rgb(255,105,0),0 0 50px 0 rgb(255,0,0);
+}
+
 
 #applications .imgrec:hover{
   box-shadow: 0 0 16px 0 rgb(255,99,71),0 0 50px 0 rgb(255,99,71);
