@@ -1,8 +1,8 @@
 <style>
 
 body {
-  font-family: garamond; 
-  background-color: #43464b; 
+  font-family: garamond;
+  background-color: #43464b;
   color: #0BEDF7;
   }
 
@@ -44,7 +44,7 @@ ul{
 
 li {
   margin-top: 5%;
-  cursor: help;
+  cursor: default;
 }
 
 .course:hover{
