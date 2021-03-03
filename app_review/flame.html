@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="flame.css">
+  <script src="NB.js"></script>
+  <script src="flame.js"></script>
+</head>
+<body>
+<button class="back" onclick="location.href='../home.html';"><span>Back</span></button>
+ <div class="app">
+   <div class="intro">
+    <div class="text">
+
+         <div class="information" id="information">
+          <img id="arrow" src="../icons/pin.png" style="width: 40%; margin-top: 20px;">
+          <h1 class="hgHead" id="hgHead"> Hunger Games </h1>
+          <a> This application is a sentiment analysis tool for book reviews. It is designed for The Hunger Games. The technology behind this app is named Naive Bayes Classifier.
+          <br>
+          <button class="reviewIt" id="reviewIt" onClick="writeRev()" style="width: 200px;"><span>Write a review!</span></button><br>
+        </div>
+
+        <div class="writeReview" id="writeReview">
+          <h1 class="hgHead" id="hgHead" style="margin-top: 10%;"> Hunger Games </h1>
+          <br>
+          <div class="inpReview" id="inpReview">
+            <a> Write your opinion of the book! </a>
+            <input type="text" id="review" name="review" class="review"><br><br>
+            <button class="reviewIt" id="reviewIt" onClick="predict()"><span>Classify!</span></button><br>
+            <h3 class="result" id="result"></h3>
+          </div>
+       </div>
+    </div>
+  </div>
+</div>
+  <h5 style="text-align: center; color: #B5B0AD; margin-top: 5%"> Author of this page is Majd Jamal. </h5>
+</body>
+</html>

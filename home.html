@@ -7,37 +7,6 @@
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="home.js"></script>
   <link rel="stylesheet" href="style.css">
-  <script>
-  console.log('hej')
-  let interval = 1e2
-
-  let c = 0.6
-  let spacestep = 0.2
-  let timestep = 0.1*2
-  let f = (c, n)=>(c + n * spacestep) % 1
-
-  setInterval(()=>{
-
-    document.querySelectorAll('#applications .imgrec').forEach(q=>{
-
-      q.style.boxShadow = ``
-      q.style.color = `red`
-
-    })
-
-    document.querySelectorAll('#applications .imgrec:hover').forEach(q=>{
-
-
-      let a = `hsl(${f(c, 0)}turn, 100%, 50%)`
-      q.style.boxShadow = `0 0 16px 0 ${a}, 0 0 50px 0 ${a}`
-      q.style.color = a
-      })
-    c += timestep * interval / 1e3
-  }, interval)
-
-
-
-  </script>
 </head>
 <body style="font-family: verdana; background-color: #333333; color: #D7E8FD;">
     <div class="home">
@@ -55,12 +24,11 @@
         <div class="achievements">
         <h2 style="color: #3C99DC; margin-top: 5%;"> Education </h2>
         <h3 style="color: #00A2ED;"> Royal Institute of Technology</h3>
-        <a class="skill" href="courses.html">M.S. degree in Computer Science</a>
+        <a class="skill" href="CS_courses.html">M.S. degree in Computer Science</a>
         <br>
         <a style="margin-top: 10%; color: #808080; font-size: 13px;"> Expected 2022</a>
         <br>
         <a style="font-size: 13px; color: #E8DCCA;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
-        <br>
         <br>
         <br>
         <a class="skill" href="ME_courses.html"> M.Sc. degree in Industrial Engineering and Management</a>
@@ -82,8 +50,8 @@
         <a> Swedish 𐤟 English 𐤟 Arabic </a>
         <h2 style="color: #3C99DC; margin-top: 5%;"> Apps </h2>
         <div class="applications" id="applications">
-        <button class="naive" id="naive" onclick="location.href='flame.html'";><span>Naive Bayes</span></button>
-        <button class="imgrec" id="imgrec" onclick="location.href='imageRec.html'";><span>Image Recognition</span></button>
+        <button class="naive" id="naive" onclick="location.href='app_review/flame.html'";><span>Naive Bayes</span></button>
+        <button class="imgrec" id="imgrec" onclick="location.href='app_image/imageRec.html'";><span>Image Recognition</span></button>
         </div>
         <div id="connect" class="contact" style="margin-left: 50%; margin-top: 5%;">
           <h2 style="color: #3C99DC; margin-top: 25%;"> Connect </h2>

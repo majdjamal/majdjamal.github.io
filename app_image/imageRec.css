@@ -1,3 +1,4 @@
+
 body{
   background-color: #333333;
   color: white;
@@ -16,12 +17,6 @@ body{
   -webkit-text-stroke: 1px black; /* width and color */
 }
 
-
-.comment{
-  background-color: #FD6A02;
-
-}
-
 .app{
   background-color: #ED7117;
   color: #FED8B1;
@@ -35,7 +30,7 @@ body{
   margin-top: 5%;
 }
 
-.questions {
+.upload {
   border-radius: 4px;
   background-color: #FED8B1;
   border: none;
@@ -49,23 +44,31 @@ body{
   cursor: pointer;
   margin-top: 60px;
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
-}
-
-.questions{
-  cursor: pointer;
   display: inline-block;
   position: relative;
   bottom: 14px;
-  transition: 0.5s;
 }
 
-.questions:focus{
+.upload:focus{
   outline:0;
 }
 
+.back{
+
+  float: left;
+  margin-left: 10px;
+  background-color: grey;
+  color: #FED8B1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  outline: none;
+}
+
 /*
-.questions:after {
+.upload:after {
   content: '»';
+
   position: absolute;
   opacity: 0;
   bottom: 14px;
@@ -74,34 +77,13 @@ body{
 }
 
 
-.questions:hover{
+.upload:hover{
   padding-right: 24px;
   padding-left: 8px;
 }
 
-.questions:hover:after {
+.upload:hover:after {
   opacity: 1;
   right: 10px;
 }
 */
-
-.inpReview{
-  margin-top: 15%;
-
-}
-
-input[type=text] {
-  border-radius: 20px;
-  border-color: black;
-  margin-top: 10%;
-  background-color: #FED8B1;
-  color: black;
-  /*  color: #ED7117; */
-  height: 80px;
-  width: 80%;
-  font-size: 30px;
-}
-
-input[type=text]:focus {
-  outline: 0;
-}

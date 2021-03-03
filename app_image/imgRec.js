@@ -8,19 +8,21 @@ let f = (c, n)=>(c + n * spacestep) % 1
 
 setInterval(()=>{
 
-  document.querySelectorAll('#applications .imgrec').forEach(q=>{
+  document.querySelectorAll('.app').forEach(q=>{
+
+    q.style.borderColor = `hsl(${f(c, 0)}turn, 100%, 50%)`
+  })
+
+  document.querySelectorAll('.upload').forEach(q=>{
 
     q.style.boxShadow = ``
-    q.style.color = `red`
 
   })
 
-  document.querySelectorAll('#applications .imgrec:hover').forEach(q=>{
-
+  document.querySelectorAll('.upload:hover').forEach(q=>{
 
     let a = `hsl(${f(c, 0)}turn, 100%, 50%)`
     q.style.boxShadow = `0 0 16px 0 ${a}, 0 0 50px 0 ${a}`
-    q.style.color = a
     })
   c += timestep * interval / 1e3
 }, interval)
