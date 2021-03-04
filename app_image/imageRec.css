@@ -17,6 +17,7 @@ body{
   -webkit-text-stroke: 1px black; /* width and color */
 }
 
+
 .app{
   background-color: #ED7117;
   color: #FED8B1;
@@ -24,6 +25,7 @@ body{
   border-color: black;
   border-radius: 70px;
   width: 70%;
+  max-width: 500px;
   height: 600px;
   text-align: center;
   margin: auto;

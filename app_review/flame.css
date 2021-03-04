@@ -35,6 +35,7 @@ body{
   border-color: black;
   border-radius: 70px;
   width: 70%;
+  max-width: 500px;
   height: 600px;
   text-align: center;
   margin: auto;
@@ -84,6 +85,10 @@ body{
 }
 
 .writeReview{
+  display: none;
+}
+
+.moreInfo{
   display: none;
 }
 

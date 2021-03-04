@@ -1,10 +1,4 @@
 
-
-//Add distinct words
-//Get totalnumberofwords
-// Word : [Positive | Negative]
-var model = {'read': [27, 11], 'love': [20, 1], 'you': [17, 3], 'her': [15, 0], 'great': [15, 1], 'but': [14, 8], 'hunger': [11, 2], 'recommend': [10, 1], 'would': [10, 4], 'characters': [9, 0], 'well': [8, 1], 'story': [7, 5], 'loved': [7, 1], 'good': [7, 3], 'reading': [7, 1], 'games': [7, 2], 'better': [7, 1], 'katniss': [6, 0], 'very': [6, 12], 'didnt': [6, 3], 'action': [5, 1], 'much': [5, 2], 'amazing': [5, 0], 'she': [4, 0], 'life': [4, 0], 'make': [4, 0], 'enjoyed': [4, 1], 'written': [4, 2], 'over': [4, 0], 'definitely': [4, 1], 'best': [4, 0], 'suspense': [3, 0], 'want': [3, 2], 'about': [3, 5], 'because': [3, 2], 'liked': [3, 0], 'twists': [2, 0], 'romance': [2, 0], 'violence': [2, 1], 'katness': [2, 0], 'where': [2, 1], 'each': [2, 3], 'other': [2, 4], 'full': [2, 1], 'page': [2, 0], 'author': [2, 3], 'peeta': [2, 0], 'closer': [2, 0], 'wonderful': [2, 0], 'did': [2, 11], 'when': [2, 1], 'naturally': [2, 0], 'even': [2, 4], 'start': [2, 1], 'awesome': [2, 0], 'storyline': [2, 0], 'thing': [2, 2], 'plot': [2, 2], 'interesting': [2, 2], '12': [2, 0], '5th': [2, 0], 'not': [2, 34], 'only': [2, 5], 'glad': [2, 0], 'reread': [2, 0], 'again': [2, 0], 'while': [2, 0], 'terrible': [0, 3], 'refund': [1, 4], 'hate': [0, 4], 'waste': [0, 7], 'bad': [2, 10], 'boring': [1, 7],'horrible': [0, 1]}
-
 good = [["Katniss Everdeen is 16 and mad at the world. First they took her dad, now they have tried to take her sister and she somehow got caught up in the mix. With her life on the line and a boy she barely knows leaning on her too Katniss must make the choice to trust those around her or just trust herself. A thrilling read that reminds you that some kids have to grow up faster than others."],
 ["I read this with my preteen and we both really enjoyed it! It is intriguing, intense, and CLEAN. We couldn’t put it down and read it in just a few days."],
 ["Such a great trilogy. Keeps you super engaged the whole time. Characters, story line and all the twists make it a must!"],
@@ -152,7 +146,7 @@ filterIt = (review) => {
 
 }
 
-let goodWords = new Map();
+let wordBank = new Map();
 
 for (let i = 0; i < good.length; ++i){
 	words = filterIt(good[i][0])
@@ -161,37 +155,26 @@ for (let i = 0; i < good.length; ++i){
 
 	for (let j = 0; j < words.length; ++j){
 		word = words[j]
-		if (word in goodWords ){
-			if (once === false){
-			goodWords[word] = goodWords[word] + 1
-			once = true
+		if (word in wordBank ){
+			wordBank[word] = [wordBank[word][0] + 1, wordBank[word][1]]
 			}
-		}
 		else{
-			goodWords[word] = 1
-		}
+			wordBank[word] = [1, 0]
+		  }
 
 	}
 }
 
-let badWords = new Map();
-
 for (let i = 0; i < bad.length; ++i){
 	words = filterIt(bad[i][0])
 
-	once = false
-
 	for (let j = 0; j < words.length; ++j){
 		word = words[j]
-		if (word in badWords ){
-			badWords[word] = badWords[word] + 1
+		if (word in wordBank ){
+			wordBank[word] = [wordBank[word][0], wordBank[word][1] + 1]
 		}
-		if (once === false){
-			goodWords[word] = goodWords[word] + 1
-			once = true
-			}
 		else{
-			badWords[word] = 1
+			wordBank[word] = [0, 1]
 		}
 
 	}
@@ -209,24 +192,19 @@ classify = (review) => {
 	let p_bad = 1 - p_good
 
 
-	p_good = -1*Math.log(p_good)
-	p_bad = -1*Math.log(p_bad)
+	p_good = Math.log(p_good)
+	p_bad = Math.log(p_bad)
 
 
 	for (let i = 0; i < processedReview.length; ++i){
 
-		if (processedReview[i] in goodWords){
+		if (processedReview[i] in wordBank){
 			let word = processedReview[i]
-			p_good -= Math.log((goodWords[word] + 1)/numbGood)
-		}
 
-		if (processedReview[i] in badWords){
-
-			let word = processedReview[i]
-			p_bad -= Math.log((badWords[word] + 1)/numbBad)
+			p_good += Math.log((wordBank[word][0] + 1)/(wordBank[word][0] + wordBank[word][1] + 1))
+			p_bad += Math.log((wordBank[word][1] + 1)/(wordBank[word][0] + wordBank[word][1] + 1))
 		}
 	}
-
 
 	if (p_good > p_bad){
 		return 1
