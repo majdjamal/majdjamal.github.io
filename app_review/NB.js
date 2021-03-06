@@ -155,6 +155,7 @@ for (let i = 0; i < good.length; ++i){
 
 	for (let j = 0; j < words.length; ++j){
 		word = words[j]
+
 		if (word in wordBank ){
 			wordBank[word] = [wordBank[word][0] + 1, wordBank[word][1]]
 			}
@@ -170,6 +171,7 @@ for (let i = 0; i < bad.length; ++i){
 
 	for (let j = 0; j < words.length; ++j){
 		word = words[j]
+
 		if (word in wordBank ){
 			wordBank[word] = [wordBank[word][0], wordBank[word][1] + 1]
 		}
