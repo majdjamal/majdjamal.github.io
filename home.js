@@ -1,4 +1,5 @@
 
+// Making button change color when hovered
 let interval = 1e2
 
 let c = 0.6

@@ -1,4 +1,7 @@
-
+//
+// Data gathered manually from Amazon Online Store.
+//
+// Positive comments
 good = [["Katniss Everdeen is 16 and mad at the world. First they took her dad, now they have tried to take her sister and she somehow got caught up in the mix. With her life on the line and a boy she barely knows leaning on her too Katniss must make the choice to trust those around her or just trust herself. A thrilling read that reminds you that some kids have to grow up faster than others."],
 ["I read this with my preteen and we both really enjoyed it! It is intriguing, intense, and CLEAN. We couldn’t put it down and read it in just a few days."],
 ["Such a great trilogy. Keeps you super engaged the whole time. Characters, story line and all the twists make it a must!"],
@@ -62,7 +65,7 @@ good = [["Katniss Everdeen is 16 and mad at the world. First they took her dad, 
 ["this is a great book for anyone who thinks they didn't like to read. So are the other Hunger Games books as well. If you are/were in 7th grade and like then try this."]
 ]
 
-
+// Negative comments
 bad = [
 ["Great storyline. Love this every time I read it. Just wish the movie was adapted better. The book is needed to understand the movie."],
 ["Sick! It is no wonder our society is becoming so violent!"],
@@ -127,7 +130,11 @@ bad = [
 ["Unfortunately this didnt hold interest. Was not the attention grabber that the hunger games series had been and was not a good addition to the others."],
 ]
 
-
+//
+// Cleaner. This function takes strings
+// and and cleans it from forbidden characters,
+// integers, and punctuations.
+//
 filterIt = (review) => {
 
 	let preProcess = ''
@@ -146,8 +153,12 @@ filterIt = (review) => {
 
 }
 
-let wordBank = new Map();
 
+let wordBank = new Map(); //	Memory of words that occured in the reviews
+
+//
+//	Loops to go through book reviews and measure occurances of words
+//
 for (let i = 0; i < good.length; ++i){
 	words = filterIt(good[i][0])
 
@@ -182,6 +193,14 @@ for (let i = 0; i < bad.length; ++i){
 	}
 }
 
+//
+// Function to classify reviews
+// that are written by website-users.
+//
+// Input: review - a string containing a comment
+// Return: Boolean - 1, meaning that the comment
+// is positive, or 0, meaning it is negative.
+//
 classify = (review) => {
 
 	let processedReview = filterIt(review)

@@ -1,10 +1,11 @@
 
+// Function to get input from the typing-box.
 getInp = () => {
   let inp = document.getElementById('review').value;
   return inp
 }
 
-
+// Changing the interface to allow users to write comments
 writeRev = () => {
 
   //document.getElementById('information').style.visibility = 'hidden';
@@ -14,6 +15,7 @@ writeRev = () => {
 
 }
 
+// Changing the interface to give users more infromation about Naive Bayes
 moreInfo = () => {
 
   document.getElementById('information').style.display = 'none';
@@ -21,7 +23,7 @@ moreInfo = () => {
 
 }
 
-
+// Function that takes the typed comment and classifies it 
 predict = () => {
   let reviev = getInp()
   let cls = classify(reviev)
